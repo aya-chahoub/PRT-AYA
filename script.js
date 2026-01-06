@@ -75,20 +75,32 @@ document.addEventListener('DOMContentLoaded', () => {
 function renderProjects(container, data){
   container.innerHTML = '';
   data.forEach(p => {
-    const card = document.createElement('article');
-    card.className = 'card reveal';
-    const meta = document.createElement('div');
-    meta.className = 'meta';
+    const card = document.createElement('article'); card.className = 'card reveal';
+
+    // thumbnail (use provided image or a placeholder from picsum)
+    const thumb = document.createElement('div'); thumb.className = 'thumb';
+    const img = document.createElement('img');
+    const seed = encodeURIComponent(p.title || 'project');
+    img.src = p.image || `https://picsum.photos/seed/${seed}/800/480`;
+    img.alt = p.title || 'Project screenshot';
+    thumb.appendChild(img);
+
+    const body = document.createElement('div'); body.className = 'card-body';
+    const meta = document.createElement('div'); meta.className = 'meta';
     const h3 = document.createElement('h3'); h3.textContent = p.title;
+    meta.appendChild(h3);
     const desc = document.createElement('p'); desc.textContent = p.desc;
     const techWrap = document.createElement('div'); techWrap.className = 'tech';
     p.tech.forEach(t => {
       const span = document.createElement('span'); span.className = 'chip'; span.textContent = t; techWrap.appendChild(span);
     });
-    meta.appendChild(h3);
-    card.appendChild(meta);
-    card.appendChild(desc);
-    card.appendChild(techWrap);
+
+    body.appendChild(meta);
+    body.appendChild(desc);
+    body.appendChild(techWrap);
+
+    card.appendChild(thumb);
+    card.appendChild(body);
     container.appendChild(card);
   });
 }
