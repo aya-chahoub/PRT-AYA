@@ -88,8 +88,27 @@
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title">Projects</h2>
-        <div id="projects-grid" class="projects-grid">
-          <!-- Project cards rendered by script.js -->
+        <div class="projects-grid">
+          <!-- Todo App -->
+          <div class="project-card">
+            <img src="src/todo-app.png" alt="Screenshot of Todo App" class="project-image" />
+            <h3 class="project-title">Todo App</h3>
+            <p class="project-description">A small todo app with local persistence and responsive layout.</p>
+          </div>
+
+          <!-- Portfolio Site -->
+          <div class="project-card">
+            <img src="src/portfolio-site.png" alt="Screenshot of Portfolio Site" class="project-image" />
+            <h3 class="project-title">Portfolio Site</h3>
+            <p class="project-description">Personal portfolio built with responsive design and smooth animations.</p>
+          </div>
+
+          <!-- API Explorer -->
+          <div class="project-card">
+            <img src="src/api-explorer.png" alt="Screenshot of API Explorer" class="project-image" />
+            <h3 class="project-title">API Explorer</h3>
+            <p class="project-description">A tiny app to explore REST APIs, built with Node and Express.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -109,6 +128,7 @@
 
     <section id="contact" class="section">
       <div class="container">
+<<<<<<< HEAD
         <h2 class="section-title">Contact</h2>
         <p class="lead">Want to collaborate or have a question? Reach me via email or connect on social media.</p>
         <div class="contact-grid">
@@ -125,6 +145,45 @@
               <a class="link" href="https://www.instagram.com/aya_chahoub" target="_blank" rel="noopener noreferrer" aria-label="Instagram">aya_chahoub</a>
               <a class="link" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Ylz Aya</a>
             </p>
+=======
+        <h2 class="section-title">Contact Me</h2>
+        <p class="lead">Want to collaborate or have a question? Use the form or reach out on social.</p>
+
+        <div class="contact-area">
+          <aside class="contact-card">
+            <h4>Connect</h4>
+            <p class="muted">Email or find me on social media.</p>
+            <ul class="social-list">
+              <li><a class="social-link gmail" href="https://mail.google.com/mail/u/0/?fs=1&to=chahoubaya6@gmail.com">Gmail</a></li>
+              <li><a class="social-link twitter" href="https://twitter.com/AyaChahoub11634" target="_blank" rel="noopener">Twitter</a></li>
+              <li><a class="social-link instagram" href="https://www.instagram.com/aya_chahoub" target="_blank" rel="noopener">Instagram</a></li>
+              <li><a class="social-link facebook" href="https://www.facebook.com/Ylz Aya" target="_blank" rel="noopener">Facebook</a></li>
+              <li><a class="social-link linkedin" href="https://www.linkedin.com/in/aya-chahoub-887b621bb/" target="_blank" rel="noopener">LinkedIn</a></li> 
+              <li><a class="social-link github" href="https://github.com/aya-chahoub" target="_blank" rel="noopener">GitHub</a></li>
+            </ul>
+          </aside>
+
+          <div class="contact-card contact-form-wrap">
+            <form id="contact-form" class="contact-form" novalidate>
+              <div class="form-row">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your name" required />
+              </div>
+              <div class="form-row">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              </div>
+              <div class="form-row">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or question" required></textarea>
+              </div>
+              <div class="form-row form-actions">
+                <button type="submit" class="btn primary">Send Message</button>
+                <div id="form-status" class="form-status" aria-live="polite"></div>
+              </div>
+            </form>
+            <p class="muted small">This form uses EmailJS to send messages directly to your Gmail. Replace EmailJS IDs in the script.</p>
+>>>>>>> ea71e0b (update projects section with images)
           </div>
         </div>
       </div>
@@ -137,6 +196,7 @@
     </div>
   </footer>
 
+    <script src="https://cdn.emailjs.com/sdk/latest/email.min.js"></script>
   <script src="script.js"></script>
 </body>
 </html>

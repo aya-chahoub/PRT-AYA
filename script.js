@@ -70,6 +70,51 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  // EmailJS form handling (sends form to Gmail via EmailJS)
+  // Replace the placeholders below: YOUR_EMAILJS_USER_ID, YOUR_SERVICE_ID, YOUR_TEMPLATE_ID
+  const contactForm = document.getElementById('contact-form');
+  const formStatus = document.getElementById('form-status');
+  if (contactForm) {
+    // initialize EmailJS if available
+    if (window.emailjs && typeof emailjs.init === 'function') {
+      // call init with your user id (replace placeholder)
+      try { emailjs.init('YOUR_EMAILJS_USER_ID'); } catch (e) { /* ignore */ }
+    }
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (formStatus) formStatus.textContent = 'Sending...';
+      const name = contactForm.elements['name'].value.trim();
+      const email = contactForm.elements['email'].value.trim();
+      const message = contactForm.elements['message'].value.trim();
+      if (!name || !email || !message) {
+        if (formStatus) formStatus.textContent = 'Please complete all fields.';
+        return;
+      }
+
+      // If EmailJS is available, send using your service/template ids
+      if (window.emailjs && typeof emailjs.sendForm === 'function') {
+        emailjs.sendForm('YOUR_SERVICE_ID','YOUR_TEMPLATE_ID', this)
+          .then(() => {
+            if (formStatus) formStatus.textContent = 'Message sent — thank you!';
+            contactForm.reset();
+            setTimeout(() => { if (formStatus) formStatus.textContent = ''; }, 4500);
+          }, (err) => {
+            if (formStatus) formStatus.textContent = 'Send failed. Check EmailJS config.';
+            console.error('EmailJS error', err);
+          });
+        return;
+      }
+
+      // Fallback: simulate send
+      setTimeout(() => {
+        if (formStatus) formStatus.textContent = 'Message sent (simulated).';
+        contactForm.reset();
+        setTimeout(() => { if (formStatus) formStatus.textContent = ''; }, 3500);
+      }, 900);
+    });
+  }
 });
 
 function renderProjects(container, data){
