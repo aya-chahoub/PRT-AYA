@@ -22,6 +22,7 @@ html,body{height:100%}
 html{scroll-padding-top:72px}
 body{
   margin:0;
+  padding-top:72px;
   background:linear-gradient(180deg,var(--bg) 0%, #070719 60%);
   color:#e6eef8;
   -webkit-font-smoothing:antialiased;
@@ -29,8 +30,12 @@ body{
   line-height:1.5;
 }
 .container{max-width:1100px;margin:0 auto;padding:2rem}
+<<<<<<< HEAD
 .nav{backdrop-filter: blur(6px);position:fixed;top:0;left:0;right:0;width:100%;z-index:999;
   background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.02)}
+=======
+.nav{backdrop-filter: blur(6px);position:fixed;top:0;left:0;width:100%;z-index:1000;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-bottom:1px solid rgba(255,255,255,0.02)}
+>>>>>>> bf84c1b (backup before contact update)
 .nav-container{display:flex;align-items:center;justify-content:space-between;gap:1rem}
 .logo{font-weight:700;color:var(--accent-1);text-decoration:none;font-size:1.05rem}
 .nav-links{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
@@ -54,7 +59,12 @@ body{
 .screen-glow{position:absolute;inset:0;border-radius:inherit;background:linear-gradient(120deg, rgba(138,43,226,0.12), rgba(255,111,181,0.06));}
 
 .section{padding:3.5rem 0}
+<<<<<<< HEAD
 .section-title{font-size:1.25rem;margin:0 0 1rem;color:var(--accent-2)}
+=======
+.section-title{font-size:1.25rem;margin:0 0 1rem;color:#fff}
+#education .section-title{color:var(--accent-1)}
+>>>>>>> bf84c1b (backup before contact update)
 .lead{color:var(--muted);max-width:60%}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.2rem;margin-top:1rem}
 
@@ -77,6 +87,7 @@ body{
 .chip{background:rgba(255,255,255,0.03);padding:0.25rem 0.5rem;border-radius:999px;font-size:0.85rem;color:var(--muted)}
 
 .education-list{list-style:none;padding:0;margin:0}
+<<<<<<< HEAD
 .education-list li{
   background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
   padding:0.9rem;border-radius:12px;border:1px solid rgba(255,255,255,0.03);
@@ -90,6 +101,9 @@ body{
 .education-list strong{color:#fff}
 .education-list .muted{color:#fff}
 .education-list li:hover{box-shadow:0 14px 34px rgba(255,181,210,0.08);transform:translateY(-4px);transition:transform 200ms ease, box-shadow 200ms ease}
+=======
+.education-list li{background:linear-gradient(135deg, rgba(138,43,226,0.08) 0%, rgba(77,208,225,0.05) 100%);padding:0.9rem;border-radius:10px;border:1px solid rgba(138,43,226,0.2);box-shadow:0 8px 20px rgba(138,43,226,0.1),inset 0 1px 0 rgba(255,111,181,0.15)}
+>>>>>>> bf84c1b (backup before contact update)
 
 .contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1rem}
 .link{
