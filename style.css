@@ -1,5 +1,5 @@
 :root{
-  --bg:#060608;
+  --bg:lab(1.43% 0.42 -1.14);
   --card:#0f1220;
   --muted:#9aa0b4;
   --accent-1:#8a2be2; /* violet */
@@ -173,9 +173,10 @@ body{
 #contact .social-link.twitter{background:linear-gradient(90deg,#8a2be2,#4dd0e1)}
 #contact .social-link.instagram{background:linear-gradient(90deg,#ff6fb5,#8a2be2)}
 #contact .social-link.facebook{background:linear-gradient(90deg,#4dd0e1,#8a2be2)}
-#contact .contact-form input,#contact .contact-form textarea{border:1px solid rgba(138,43,226,0.12);background:transparent}
-#contact .contact-form .btn.primary{background:linear-gradient(90deg,#8a2be2,#ff4d6d);color:#fff}
-#contact .form-status{color:#4dd0e1;font-weight:700}
+#contact .contact-form input,#contact .contact-form textarea{border:1px solid #ffffff;background:#111;color:#fff !important}
+#contact .contact-form input::placeholder,#contact .contact-form textarea::placeholder{color:#cccccc !important}  
+#contact .contact-form .btn.primary{background:linear-gradient(90deg,hsl(300, 5%, 96%),#ff4d6d);color:#fff}
+#contact .form-status{color:#fff;font-weight:700}
 
 @media (max-width:900px){
   #contact .contact-area{grid-template-columns:1fr}
